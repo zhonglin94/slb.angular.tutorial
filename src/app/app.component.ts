@@ -9,6 +9,10 @@ const menuItems: MenuItem[] = [
   {
     name: 'Throttle Example',
     path: 'throttle-example'
+  },
+  {
+    name: 'Color Button Example',
+    path: 'color-button-example'
   }
 ];
 

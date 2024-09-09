@@ -20,6 +20,10 @@ export class ThrottleExampleComponent implements OnInit {
     this.throttledClickPlainJavascript();
   }
 
+  private throttleClickRxjs(): void {
+    // TODO to be implemented
+  }
+
   private throttledClickPlainJavascript(): void {
     if ((Date.now() - this.lastClick) > this.throttleTime) {
       ThrottleExampleComponent.doHeavyTask();

@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color-button-example.component.scss']
 })
 export class ColorButtonExampleComponent implements OnInit {
-  color = 'red';
-
   constructor() {
   }
 
