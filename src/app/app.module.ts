@@ -1,4 +1,4 @@
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +9,7 @@ import { AbstractToastExampleComponent } from './di/toast/abstract-toast-example
 import { ColorButtonExampleComponent } from './di/color-button/color-button-example/color-button-example.component';
 import { ColorButtonComponent } from './di/color-button/color-button/color-button.component';
 import { ThrottleExampleComponent } from './observable/throttle/throttle-example/throttle-example.component';
+import { InterceptorExampleComponent } from './di/interceptor/interceptor-example/interceptor-example.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +17,13 @@ import { ThrottleExampleComponent } from './observable/throttle/throttle-example
     AbstractToastExampleComponent,
     ColorButtonExampleComponent,
     ColorButtonComponent,
-    ThrottleExampleComponent
+    ThrottleExampleComponent,
+    InterceptorExampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

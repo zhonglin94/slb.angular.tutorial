@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ColorButtonExampleComponent } from './di/color-button/color-button-example/color-button-example.component';
+import { InterceptorExampleComponent } from './di/interceptor/interceptor-example/interceptor-example.component';
 import { ThrottleExampleComponent } from './observable/throttle/throttle-example/throttle-example.component';
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'throttle-example',
     component: ThrottleExampleComponent
+  },
+  {
+    path: 'interceptor-example',
+    component: InterceptorExampleComponent
   }
 ];
 

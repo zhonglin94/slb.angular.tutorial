@@ -11,6 +11,10 @@ const menuItems: MenuItem[] = [
     path: 'throttle-example'
   },
   {
+    name: 'Interceptor Example',
+    path: 'interceptor-example'
+  },
+  {
     name: 'Color Button Example',
     path: 'color-button-example'
   }
