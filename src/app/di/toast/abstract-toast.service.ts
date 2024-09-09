@@ -10,8 +10,8 @@ export enum AbstractToastLevel {
 }
 
 export class AbstractToast {
-  level: AbstractToastLevel;
-  message: string;
+  level?: AbstractToastLevel;
+  message?: string;
   title?: string;
 }
 
