@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-injection-resolution-example',
   templateUrl: './injection-resolution-example.component.html',
-  styleUrls: ['./injection-resolution-example.component.scss']
+  styleUrls: ['./injection-resolution-example.component.scss'],
 })
 export class InjectionResolutionExampleComponent implements OnInit {
   counters: number[] = [];
