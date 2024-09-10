@@ -10,6 +10,8 @@ import { ColorButtonExampleComponent } from './di/color-button/color-button-exam
 import { ColorButtonComponent } from './di/color-button/color-button/color-button.component';
 import { ThrottleExampleComponent } from './observable/throttle/throttle-example/throttle-example.component';
 import { InterceptorExampleComponent } from './di/interceptor/interceptor-example/interceptor-example.component';
+import { InjectionResolutionExampleComponent } from './di/injection-resolution/injection-resolution-example.component';
+import { CounterComponent } from './di/injection-resolution/counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { InterceptorExampleComponent } from './di/interceptor/interceptor-exampl
     ColorButtonExampleComponent,
     ColorButtonComponent,
     ThrottleExampleComponent,
-    InterceptorExampleComponent
+    InterceptorExampleComponent,
+    InjectionResolutionExampleComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,

@@ -9,16 +9,20 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   {
-    name: 'Throttle Example',
+    name: 'Throttle',
     path: 'throttle-example'
   },
   {
-    name: 'Interceptor Example',
+    name: 'Interceptor',
     path: 'interceptor-example'
   },
   {
-    name: 'Color Button Example',
+    name: 'Color Button',
     path: 'color-button-example'
+  },
+  {
+    name: 'Injection Resolution',
+    path: 'injection-resolution-example'
   }
 ];
 

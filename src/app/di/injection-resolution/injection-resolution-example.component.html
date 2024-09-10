@@ -1,0 +1,7 @@
+<button (click)="add()">Add Counter</button>
+<ng-container *ngFor="let counter of counters ">
+  <div class="counter-wrapper">
+    <button (click)="remove(counter)">Remove Counter</button>
+    <app-counter></app-counter>
+  </div>
+</ng-container>
