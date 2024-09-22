@@ -9,6 +9,7 @@ export class ThrottleExampleComponent implements OnInit {
   private throttleTime = 1000;
   private lastClick = Date.now() - this.throttleTime;
   private count = 0;
+  logs: string[] = [];
 
   constructor() {
   }
@@ -27,7 +28,7 @@ export class ThrottleExampleComponent implements OnInit {
   private throttledClickPlainJavascript(): void {
     if ((Date.now() - this.lastClick) > this.throttleTime) {
       ThrottleExampleComponent.doHeavyTask();
-      console.log(`Clicked ${++this.count} times`);
+      this.logs.push(`Clicked ${++this.count} times`);
       this.lastClick = Date.now();
     }
   }

@@ -1,2 +1,5 @@
 <h1>Throttle Example</h1>
 <button (click)="onClick()">Throttle click</button>
+<ng-container *ngFor="let log of logs">
+  <div>{{log | json}}</div>
+</ng-container>
