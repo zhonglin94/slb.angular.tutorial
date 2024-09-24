@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProtectedRouteExampleComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  isDirty(): boolean {
+    return true;
+  }
 }

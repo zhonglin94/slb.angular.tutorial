@@ -5,6 +5,7 @@ import { InjectionResolutionExampleComponent } from './di/injection-resolution/i
 import { InterceptorExampleComponent } from './di/interceptor/interceptor-example/interceptor-example.component';
 import { ThrottleExampleComponent } from './observable/throttle/throttle-example/throttle-example.component';
 import { AuthGuard } from './router/auth.guard';
+import { DirtyGuard } from './router/dirty.guard';
 import { ProtectedRouteExampleComponent } from './router/protected-route-example/protected-route-example.component';
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
   {
     path: 'protected-route-example',
     component: ProtectedRouteExampleComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    canDeactivate: [DirtyGuard]
   }
 ];
 
