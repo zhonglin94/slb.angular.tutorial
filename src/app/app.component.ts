@@ -28,8 +28,12 @@ const menuItems: MenuItem[] = [
     path: 'injection-resolution-example'
   },
   {
-    name: 'Projected Route',
+    name: 'Auth Guard Route',
     path: 'protected-route-example'
+  },
+  {
+    name: 'Dirty Guard Route',
+    path: 'dirty-guard-example'
   }
 ];
 

@@ -12,8 +12,4 @@ export class ProtectedRouteExampleComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  isDirty(): boolean {
-    return true;
-  }
 }

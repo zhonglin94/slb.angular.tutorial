@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanDeactivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ProtectedRouteExampleComponent } from './protected-route-example/protected-route-example.component';
+import { CanDeactivateExampleComponent } from './can-deactivate-example/can-deactivate-example.component';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DirtyGuard implements CanDeactivate<ProtectedRouteExampleComponent> {
+export class DirtyGuard implements CanDeactivate<CanDeactivateExampleComponent> {
   canDeactivate(
-    component: ProtectedRouteExampleComponent,
+    component: CanDeactivateExampleComponent,
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (component.isDirty()) {
