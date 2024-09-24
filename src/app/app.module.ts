@@ -12,6 +12,7 @@ import { ThrottleExampleComponent } from './observable/throttle/throttle-example
 import { InterceptorExampleComponent } from './di/interceptor/interceptor-example/interceptor-example.component';
 import { InjectionResolutionExampleComponent } from './di/injection-resolution/injection-resolution-example.component';
 import { CounterComponent } from './di/injection-resolution/counter/counter.component';
+import { ProtectedRouteExampleComponent } from './router/protected-route-example/protected-route-example.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CounterComponent } from './di/injection-resolution/counter/counter.comp
     ThrottleExampleComponent,
     InterceptorExampleComponent,
     InjectionResolutionExampleComponent,
-    CounterComponent
+    CounterComponent,
+    ProtectedRouteExampleComponent
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,10 @@ const menuItems: MenuItem[] = [
   {
     name: 'Injection Resolution',
     path: 'injection-resolution-example'
+  },
+  {
+    name: 'Projected Route',
+    path: 'protected-route-example'
   }
 ];
 
