@@ -12,6 +12,11 @@
       flex: 0 0 200px;
       border: 1px solid grey;
       padding: 10px;
+
+      .selected {
+        background: blue;
+        color: white;
+      }
     }
 
     .content {

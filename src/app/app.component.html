@@ -1,7 +1,7 @@
 <div class="app">
   <nav>
     <ng-container *ngFor="let menu of menuItems">
-      <li>
+      <li [class.selected]="menu.selected">
         <a [routerLink]="menu.path">{{menu.name}}</a>
       </li>
     </ng-container>

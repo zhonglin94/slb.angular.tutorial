@@ -18,3 +18,7 @@ body {
 .toast.show {
   opacity: 1;
 }
+
+a:-webkit-any-link {
+  color: inherit;
+}
