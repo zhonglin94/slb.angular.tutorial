@@ -1,10 +1,4 @@
-import { Component, Inject, InjectionToken, Input, OnInit, Optional } from '@angular/core';
-
-export interface GlobalColorButtonConfig {
-  color: string;
-}
-
-export const GLOBAL_COLOR_BUTTON_CONFIG = new InjectionToken<GlobalColorButtonConfig>('Global color button config');
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-color-button',
@@ -14,13 +8,10 @@ export const GLOBAL_COLOR_BUTTON_CONFIG = new InjectionToken<GlobalColorButtonCo
 export class ColorButtonComponent implements OnInit {
   @Input() color: string | undefined;
 
-  constructor(@Optional() @Inject(GLOBAL_COLOR_BUTTON_CONFIG) private config?: GlobalColorButtonConfig) {
-
+  constructor() {
+    // TODO using DI to add global config to change the color of the color button component.
   }
 
   ngOnInit(): void {
-    if (this.config?.color && !this.color) {
-      this.color = this.config.color;
-    }
   }
 }
