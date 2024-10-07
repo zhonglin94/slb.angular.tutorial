@@ -28,13 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'protected-route-example',
-    component: ProtectedRouteExampleComponent,
-    canActivate: [AuthGuard],
+    component: ProtectedRouteExampleComponent
   },
   {
     path: 'dirty-guard-example',
-    component: CanDeactivateExampleComponent,
-    canDeactivate: [DirtyGuard]
+    component: CanDeactivateExampleComponent
   }
 ];
 

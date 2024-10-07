@@ -11,10 +11,7 @@ export class DirtyGuard implements CanDeactivate<CanDeactivateExampleComponent> 
     component: CanDeactivateExampleComponent,
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (component.isDirty()) {
-      return window.confirm('The component is dirty. Discard changes?');
-    } else {
-      return true;
-    }
+    // TODO: add logic the show the confirm dialog
+    return true;
   }
 }
