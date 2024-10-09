@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-import { filter, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 interface MenuItem {
   name: string;
@@ -44,20 +43,19 @@ export class AppComponent implements OnInit, OnDestroy {
   menuItems = menuItems;
   private sub: Subscription | undefined;
 
-  constructor(private router: Router,) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    // TODO use the acutal toast service to show the toast
+    // TODO use the actual toast service to show the toast
+  }
 
-    this.sub = this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe((e) => {
-        const navEnd = e as NavigationEnd;
-        this.menuItems.forEach(menu => {
-          menu.selected = navEnd.url.includes(menu.path);
-        });
-      });
+  private autoSelectMenuItems(): void {
+    // TODO to be implemented
+  }
+
+  private showActualToast(): void {
+    // TODO to be implemented
   }
 
   ngOnDestroy(): void {
