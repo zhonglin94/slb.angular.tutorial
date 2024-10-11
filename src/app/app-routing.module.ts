@@ -27,13 +27,9 @@ const routes: Routes = [
     component: InjectionResolutionExampleComponent
   },
   {
-    path: 'protected-route-example',
-    component: ProtectedRouteExampleComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'dirty-guard-example',
-    component: CanDeactivateExampleComponent
+    path: 'router',
+    loadChildren: () => import('./router/router-demo.module')
+      .then(m => m.RouterDemoModule)
   }
 ];
 

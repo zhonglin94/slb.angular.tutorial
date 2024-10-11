@@ -11,8 +11,6 @@ import {ThrottleExampleComponent} from './observable/throttle/throttle-example/t
 import {InterceptorExampleComponent} from './di/interceptor/interceptor-example/interceptor-example.component';
 import {InjectionResolutionExampleComponent} from './di/injection-resolution/injection-resolution-example.component';
 import {CounterComponent} from './di/injection-resolution/counter/counter.component';
-import {ProtectedRouteExampleComponent} from './router/protected-route-example/protected-route-example.component';
-import {CanDeactivateExampleComponent} from './router/can-deactivate-example/can-deactivate-example.component';
 import {AuthInterceptor} from "./di/interceptor/auth.interceptor";
 
 @NgModule({
@@ -25,8 +23,6 @@ import {AuthInterceptor} from "./di/interceptor/auth.interceptor";
     InterceptorExampleComponent,
     InjectionResolutionExampleComponent,
     CounterComponent,
-    ProtectedRouteExampleComponent,
-    CanDeactivateExampleComponent
   ],
   imports: [
     BrowserModule,

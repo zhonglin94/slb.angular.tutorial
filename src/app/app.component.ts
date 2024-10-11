@@ -29,12 +29,8 @@ const menuItems: MenuItem[] = [
     path: 'injection-resolution-example'
   },
   {
-    name: 'Auth Guard Route',
-    path: 'protected-route-example'
-  },
-  {
-    name: 'Dirty Guard Route',
-    path: 'dirty-guard-example'
+    name: 'Router',
+    path: 'router'
   }
 ];
 

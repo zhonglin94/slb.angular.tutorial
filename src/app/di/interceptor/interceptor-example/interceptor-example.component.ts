@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { AbstractToastLevel, AbstractToastService } from '../../toast/abstract-toast.service';
+import {HttpClient} from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {AbstractToastLevel, AbstractToastService} from '../../toast/abstract-toast.service';
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'app-interceptor-example',
