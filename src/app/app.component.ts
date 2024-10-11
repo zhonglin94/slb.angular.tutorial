@@ -1,5 +1,6 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {ThemeService} from "./theme.service";
 
 interface MenuItem {
   name: string;
@@ -43,11 +44,19 @@ export class AppComponent implements OnInit, OnDestroy {
   menuItems = menuItems;
   private sub: Subscription | undefined;
 
-  constructor() {
+  constructor(private themeService: ThemeService) {
   }
 
   ngOnInit(): void {
     // TODO use the actual toast service to show the toast
+
+    setInterval(() => {
+      if (this.themeService.theme === 'light') {
+        this.themeService.changeTheme('dark')
+      } else {
+        this.themeService.changeTheme('light')
+      }
+    }, 1000)
   }
 
   private autoSelectMenuItems(): void {
