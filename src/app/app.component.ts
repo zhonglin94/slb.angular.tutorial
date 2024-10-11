@@ -1,6 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs';
+import {filter, Subscription} from 'rxjs';
 import {ThemeService} from "./theme.service";
+import {ActualToastService} from "./di/toast/actual-toast.service";
+import {AbstractToastService} from "./di/toast/abstract-toast.service";
+import {NavigationEnd, Router} from "@angular/router";
 
 interface MenuItem {
   name: string;
@@ -44,7 +47,10 @@ export class AppComponent implements OnInit, OnDestroy {
   menuItems = menuItems;
   private sub: Subscription | undefined;
 
-  constructor(private themeService: ThemeService) {
+  constructor(private themeService: ThemeService,
+              private actualToastService: ActualToastService,
+              private abstractToastService: AbstractToastService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -56,11 +62,21 @@ export class AppComponent implements OnInit, OnDestroy {
       } else {
         this.themeService.changeTheme('light')
       }
-    }, 1000)
+    }, 1000);
+
+    this.abstractToastService.toast$.subscribe(toast => {
+      this.actualToastService.showToast(toast.message as string);
+    })
+    this.autoSelectMenuItems()
   }
 
   private autoSelectMenuItems(): void {
     // TODO to be implemented
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+    ).subscribe(event => {
+      console.log(event)
+    })
   }
 
   private showActualToast(): void {
