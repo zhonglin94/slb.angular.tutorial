@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Subject } from 'rxjs/internal/Subject';
+import {Injectable} from '@angular/core';
+import {debounceTime, Observable} from 'rxjs';
+import {Subject} from 'rxjs/internal/Subject';
 
 export enum AbstractToastLevel {
   Info,
@@ -26,7 +26,7 @@ export class AbstractToastService {
   private readonly _toast$: Subject<AbstractToast> = new Subject<AbstractToast>();
 
   get toast$(): Observable<AbstractToast> {
-    return this._toast$.asObservable();
+    return this._toast$.asObservable().pipe(debounceTime(3000));
   }
 
   emit(toast: AbstractToast): void {

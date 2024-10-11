@@ -8,7 +8,7 @@ import {of} from "rxjs";
 const mockBook = {
   title: 'book title'
 }
-fdescribe('InterceptorExampleComponent', () => {
+describe('InterceptorExampleComponent', () => {
   let component: InterceptorExampleComponent;
   let fixture: ComponentFixture<InterceptorExampleComponent>;
   let abstractToastServiceSpy: jasmine.SpyObj<AbstractToastService>;
