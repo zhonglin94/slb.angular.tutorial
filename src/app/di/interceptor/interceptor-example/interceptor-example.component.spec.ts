@@ -44,7 +44,7 @@ fdescribe('InterceptorExampleComponent', () => {
 
   it('should show the error toast', fakeAsync(() => {
     component.onClick();
-    tick();
+    tick(500);
     expect(abstractToastServiceSpy.emit).toHaveBeenCalled()
   }))
 });

@@ -1,7 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Component, OnInit} from '@angular/core';
 import {AbstractToastLevel, AbstractToastService} from '../../toast/abstract-toast.service';
-import {environment} from "../../../../environments/environment";
+import {delay} from "rxjs";
 
 @Component({
   selector: 'app-interceptor-example',
@@ -17,9 +17,11 @@ export class InterceptorExampleComponent implements OnInit {
   }
 
   onClick(): void {
-    this.httpClient.get('example').subscribe(
-      () => this.toastService.emit({ level: AbstractToastLevel.Success, message: 'Request success' }),
-      () => this.toastService.emit({ level: AbstractToastLevel.Error, message: 'Request failed' })
+    this.httpClient.get('example').pipe(
+      delay(500)
+    ).subscribe(
+      () => this.toastService.emit({level: AbstractToastLevel.Success, message: 'Request success'}),
+      () => this.toastService.emit({level: AbstractToastLevel.Error, message: 'Request failed'})
     );
   }
 }
